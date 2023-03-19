@@ -1,0 +1,14 @@
+#Indica COMO y desde DONDE se va a inicializar el contenedor
+#Servicio
+services:
+  #nombre del servicio
+  app-csv:
+  #Instruccion de construir el servicio
+    build:
+      #El contexto es la carpeta actual "."
+      context: .
+      #Archivo a leer
+      dockerfile: Dockerfile
+    #todos los archivos esten enlazados a la carpeta del contenedor
+    volumes:
+      - .:/app

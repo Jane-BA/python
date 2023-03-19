@@ -1,0 +1,10 @@
+services:
+  app-csv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    #Enlase del puerto de la maquina con el puerto del contenedor
+    ports:
+      - '80:80'
